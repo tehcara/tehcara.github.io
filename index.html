@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-  <title>Caroline's Portfolio</title>
+  <title>Caroline's Portfolio // MBCS Python Programmer</title>
   <link rel="stylesheet" href="portstyles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1>Welcome to my Portfolio!</h1>
-    <p>I'm a passionate Python programmer with skills in data analysis and strong communication abilities. </p>
+  <header id="top">
+    <h1><code>Hello World!</code> It's Caroline :&rpar;</h1>
+    <p><strong>Python Programmer // Software QA & SecOps Analyst</strong></p>
+    <p>Investigating code and securing data with a detective-mindset.</p>
   </header>
   <nav>
     <ul>
@@ -26,222 +26,176 @@
   </nav>
 
   <main id="content">
-    <section>
-      <h3><a name="about"></a>About Me</h3>
-      <p>As a dedicated career returner, I'm enthusiastic about transitioning my skills and experience into the tech
-        industry. I possess a strong foundation in Python programming and data analysis, complemented by exceptional
-        communication and interpersonal skills developed through years of caregiving. My background has instilled in me
-        a knack for problem-solving, adaptability, and a collaborative approach. I'm seeking a part-time, remote coding
-        role where I can leverage my technical expertise and passion for learning to contribute to a dynamic team and
-        make a meaningful impact.</p>
+    <section id="about">
+      <h3>About Me</h3>
+      <p>I'm an MBCS Python programmer with a strong focus on quality assurance, data analysis, and security-minded
+        problem-solving. I enjoy finding hidden issues, fine-tuning secure workflows, and bridging communication gaps.
+        My background spans cryptography, GUI development, NLP, data visualisation, and hands-on troubleshooting across
+        real-world systems, supported by strong administrative and communication skills.</p>
+      <p>I love clean code, clear documentation, and that satisfying moment when I solve the problem, no matter what
+        time it is. If you'd like to work with me, feel free to get in touch. :&rpar;</p>
+      <p class="return-link"><a href="#top">^^ Return to Start</a></p>
     </section>
 
     <hr>
 
-    <section>
-      <h3><a name="portfolio"></a>Portfolio</h3>
+    <section id="portfolio">
+      <h3>Project Showcase</h3>
+      <p>Here are some of the projects I've enjoyed building, ranging from technical coursework to personal development.
+        Each one reflects my approach to analysis, clarity, structure, and a detective-mindset.</p>
       <ul>
         <li>
-          <h4>OU Project (title pending grade)</h4>
-          <p>This project involved developing a Python program that implements a simple cipher generator based on a
-            birth month key. The program takes a user's birth month as input and uses it to generate a unique encryption
-            key. This key is then used to encrypt and decrypt messages using a combination of AES-CBC encryption and a
-            key derivation function (KDF). The program also includes error handling to ensure robustness and
-            user-friendliness.</p>
-          <p>Key features:</p>
+          <h4>AES-256 Cipher Generator</h4>
+          <p>Python // Cryptography // PBKDF2 // AES-CBC</p>
+          <p>A PEP8-compliant encryption tool developed as my <strong>Open University capstone project</strong>. It uses
+            AES-256 in CBC mode with PBKDF2 key derivation, full input validation, and structured error handling.</p>
           <ul>
-            <li>Secure encryption and decryption of messages using AES-CBC and KDF.</li>
-            <li>User-friendly interface for inputting messages and birth month keys.</li>
-            <li>Robust error handling to prevent unexpected crashes or data corruption.</li>
-          </ul>
-          <p>Challenges:</p>
-          <ul>
-            <li>Implementing the KDF algorithm efficiently and securely.</li>
-            <li>Designing a user-friendly interface for inputting birth month keys.</li>
-          </ul>
-          <p>Lessons learned:</p>
-          <ul>
-            <li>The importance of thorough testing and debugging to ensure code reliability.</li>
-            <li>The value of clear and concise documentation to explain complex concepts.</li>
-          </ul>
-        </li>
-
-        <li>
-          <h4>Edgehill Data Analysis Project</h4>
-          <p>This project involved analyzing supermarket sales data using Python and Pandas. The goal was to identify
-            trends and insights related to customer behavior and product performance. The analysis included data
-            cleaning, transformation, and aggregation to prepare the data for visualization. Various visualization
-            techniques were used to create informative charts and graphs that highlighted key findings.</p>
-          <p>Key features:</p>
-          <ul>
-            <li>Comprehensive data cleaning and preprocessing to ensure data quality.</li>
-            <li>Effective use of Pandas for data manipulation and analysis.</li>
-            <li>Creation of insightful visualizations using Matplotlib and Seaborn.</li>
-          </ul>
-          <p>Challenges:</p>
-          <ul>
-            <li>Handling missing or inconsistent data.</li>
-            <li>Choosing the most appropriate visualization techniques to represent the data.</li>
-          </ul>
-          <p>Lessons learned:</p>
-          <ul>
-            <li>The importance of data exploration and visualization in uncovering hidden patterns.</li>
-            <li>The value of clear and concise communication of data insights to stakeholders.</li>
-          </ul>
-          <p><a href="https://github.com/tehcara/supermarket-sales-analysis">View on GitHub</a></p>
-        </li>
-
-        <li>
-          <h4>Edgehill NLP Sentiment Analysis</h4>
-          <p>This project involved applying Natural Language Processing (NLP) techniques to analyse a dataset of video
-            game reviews and determine the sentiment expressed in each review. The program utilises the NLTK library in
-            Python to perform sentiment analysis on individual sentences within the reviews and then aggregates those
-            scores to classify each review as positive or negative. The project also includes an exploration of Named
-            Entity Recognition (NER) to identify and extract key entities mentioned in the reviews.</p>
-          <p>Key features:</p>
-          <ul>
-            <li>Sentiment analysis using TextBlob to determine the polarity of individual sentences and overall reviews.
+            <li><strong>Implementation</strong> || Implements AES-256 encryption in CBC mode with PBKDF2 key derivation.
             </li>
-            <li>Algorithm development for classifying reviews as positive or negative based on aggregated sentiment
-              scores.</li>
-            <li>Named Entity Recognition (NER) using NLTK to identify and extract key entities from the text.</li>
+            <li><strong>Detective-Mindset</strong> || Integrated robust input validation and custom exception handling
+              (EmptyStringError, OneCharBirthMonthError) to prevent system crashes.</li>
+            <li><strong>Defensive Design</strong> || One million hash iterations to make the derived key computationally
+              expensive to hack!</li>
+            <li><strong>Professional Standards</strong> || Fully documented and PEP8-compliant, adhering to ISO/IEC
+              18033-3 and NIST FIP197 standards.</li>
+            <li><strong>Security Focus</strong> || Demonstrates security-focused programming and defensive coding.</li>
           </ul>
-          <p>Challenges:</p>
+          <figure class="code-figure">
+            <figcaption>Defensive Programming &amp; Input Validation</figcaption>
+          <div class="code-box">
+            except WordTooLongError: # catch trolling; words are &lt;45-chars
+              print&lcub;f'The longest English word is '+
+                f'pneumonoultramicroscopicsilicovolcanoconiosis.'&rpar;
+          </div>
+          </figure>
+          <p><a href="https://github.com/tehcara/aes-cbc-cipher-generator">>> View on GitHub</a></p>
+        </li>
+
+        <li>
+          <h4>Supermarket Sales Analysis</h4>
+          <p>Python // Pandas // Matplotlib // Seaborn // Data Cleaning // Visualisation</p>
+          <p>An end-to-end data analysis project developed as my <strong>Edge Hill University capstone project</strong>.
+            It explores customer behaviour, sales trends, and product performance. It includes data wrangling, feature
+            extraction, and a wide range of visual charts.</p>
           <ul>
-            <li>Determining an appropriate threshold for classifying reviews based on sentiment scores.</li>
-            <li>Handling inconsistencies and nuances in language to ensure accurate sentiment analysis.</li>
+            <li><strong>Data Integrity</strong> || Cleaned and normalized a 3-month real-world retail dataset using
+              Pandas.</li>
+            <li><strong>Visualisation</strong> || Built clear, readable charts using Matplotlib and Seaborn to
+              communicate complex performance data.</li>
+            <li><strong>Analytical Insight</strong> || Located anomalous gems in the homogenous swill to identify true
+              performance outliers.</li>
+            <li><strong>Operational Value</strong> || Identified Saturday at 7 pm as the peak transaction window,
+              providing actionable insights for staff redeployment.</li>
+            <li><strong>Critical Thinking</strong> || Evaluated dataset limitations, noting the downward trend and the
+              risks of short-term data modeling.</li>
           </ul>
-          <p>Lessons learned:</p>
+          <figure class="code-figure">
+            <figcaption>Data Cleaning &amp; Feature Engineering</figcaption>
+            <div class="code-box">
+            day_list = [] # var to hold days
+            for i in range(df.shape[0]): # iterate over all rows
+              # extract day from mm/dd/yyyy
+              day = int(str(df['Date'][i]).split('/')[1])
+              day_list.append(str(day)) # append to list
+            df['Day'] = day_list # assign new column
+          </div>
+          </figure>
+          <p><a href="https://github.com/tehcara/supermarket-sales-analysis">>> View on GitHub</a></p>
+        </li>
+
+        <li>
+          <h4>Sentiment Analysis of Game Reviews</h4>
+          <p>Python // NLTK // TextBlob // NER // NLP</p>
+          <p>A natural language processing (NLP) project analysing sentiment in video game reviews, with additional
+            named entity recognition (NER) to extract key entities.</p>
           <ul>
-            <li>The practical application of NLP techniques for analyzing text data and extracting meaningful insights.
+            <li>Sentence-level sentiment scoring and aggregation.
             </li>
-            <li>The importance of considering context and nuances in language when performing sentiment analysis.</li>
-            <li>The value of combining different NLP techniques, such as sentiment analysis and NER, to gain a more
-              comprehensive understanding of text data.</li>
+            <li>Custom classification logic for positive/negative reviews.</li>
+            <li>Named Entity Recognition using NLTK.</li>
+            <li>Demonstrates text processing, algorithm design, and data interpretation.</li>
           </ul>
-          <p><a href="https://github.com/tehcara/nlp-game-reviews-sentiment-analysis">View on GitHub</a></p>
+          <figure class="code-figure">
+            <figcaption>Sentiment Classification Logic</figcaption>
+            <div class="code-box">
+              for sentence in blob.sentences:
+                review_polarity += sentence.sentiment.polarity
+              if review_polarity > 0.27: # avg dataset polarity
+                sentiment_label_for_current_review = 1 # positive
+              else:
+                sentiment_label_for_current_review = 0 # negative
+            </div>
+          </figure>
+          <p><a href="https://github.com/tehcara/nlp-game-reviews-sentiment-analysis">>> View on GitHub</a></p>
         </li>
 
         <li>
-          <h4>Futurelearn Rock-Paper-Scissors Game</h4>
-          <p>This project involved building a GUI-based Rock-Paper-Scissors game using Python and Tkinter. The game
-            allows
-            the user to play against the computer, with the computer's choices randomly generated. The GUI provides a
-            user-friendly interface for selecting moves and displays the results of each round. The game also includes
-            score tracking to keep track of the player's wins and losses.</p>
-          <p>Key features:</p>
+          <h4>GUI Games</h4>
+          <p>Python // Tkinter // Event-Driven Programming</p>
+          <p>Two small but polished GUI games; Tic-Tac-Toe and Rock-Paper-Scissors. They demonstrate state management,
+            event handling, and UI design.</p>
+          <p><strong>Tic-Tac-Toe</strong> feature highlights:</p>
           <ul>
-            <li>Interactive GUI using Tkinter for an engaging user experience.</li>
-            <li>Randomly generated computer moves for a challenging game.</li>
-            <li>Score tracking to monitor player progress.</li>
+            <li>Dynamic 3x3 grid.</li>
+            <li>Win-condition algorithm.</li>
+            <li>Clean, readable game logic.</li>
           </ul>
-          <p>Challenges:</p>
+          <p><strong>Rock-Paper-Scissors</strong> feature highlights:</p>
           <ul>
-            <li>Designing a responsive and visually appealing GUI.</li>
-            <li>Implementing the game logic to handle different move combinations.</li>
+            <li>Event-driven UI.</li>
+            <li>Randomised computer choices.</li>
+            <li>Score tracking and visual feedback.</li>
           </ul>
-          <p>Lessons learned:</p>
-          <ul>
-            <li>The importance of user experience design in creating engaging applications.</li>
-            <li>The value of breaking down complex tasks into smaller, manageable functions.</li>
-          </ul>
-          <p><a href="https://github.com/tehcara/rock-paper-scissors-game">View on GitHub</a></p>
-        </li>
-
-        <li>
-          <h4>Tic-tac-toe Game</h4>
-          <p>This project involved implementing a classic Tic-tac-toe game in Python with a Tkinter GUI. The game allows
-            two players to take turns marking spaces on a 3x3 grid. The program checks for winning combinations after
-            each turn and declares a winner or a draw.</p>
-          <p>Key features:</p>
-          <ul>
-            <li>Simple and intuitive GUI for easy gameplay.</li>
-            <li>Clear visual representation of the game board.</li>
-            <li>Accurate detection of winning combinations and draws.</li>
-          </ul>
-          <p>Challenges:</p>
-          <ul>
-            <li>Designing an efficient algorithm for checking winning conditions.</li>
-            <li>Handling user input and updating the game board dynamically.</li>
-          </ul>
-          <p>Lessons learned:</p>
-          <ul>
-            <li>The importance of planning and designing the game logic before implementation.</li>
-            <li>The value of testing and debugging to ensure correct functionality.</li>
-          </ul>
-          <p><a href="https://github.com/tehcara/tic-tac-toe-game">View on GitHub</a></p>
+          <figure class="code-figure">
+            <figcaption>UI State Management</figcaption>
+            <div class="code-box">
+              # player colour in tic-tac-toe
+              style.configure('played.TButton', foreground='blue')
+              # computer colour
+              style.configure('ai.TButton', foreground='red')
+            </div>
+          </figure>
+          <p><a href="https://github.com/tehcara/tic-tac-toe-game">>> View Tic-Tac-Toe on GitHub</a></p>
+          <p><a href="https://github.com/tehcara/rock-paper-scissors-game">>> View Rock-Paper-Scissors on GitHub</a></p>
         </li>
       </ul>
-    </section>
-
-    <section>
-      <h4>Code Gallery</h4>
-      <div class="grid-gallery">
-        <div class="grid-gallery-item">
-          <img src="tic-tac-toe-game-in-play-dm.png" alt="Tic-tac-toe Game">
-          <p>Tic-Tac-Toe Game in play, showing GUI with OS in dark mode.</p>
-        </div>
-        <div class="grid-gallery-item">
-          <img src="tic-tac-toe-game-in-play-lm.png" alt="Tic-tac-toe Game">
-          <p>Tic-Tac-Toe Game in play, showing GUI with OS in light mode.</p>
-        </div>
-        <div class="grid-gallery-item">
-          <p class="code">
-            game_board = {6: '', 7: '', 8: '',
-            3: '', 4: '', 5: '',
-            0: '', 1: '', 2: ''}
-
-            winning_lines = [[0,1,2],[3,4,5],[6,7,8],[0,4,8],
-            [2,4,6],[0,3,6],[1,4,7],[2,5,8]]
-          </p>
-          <p>The Tic-Tac-Toe Game board layout is laid out with a dictionary. The winning combinations are stored in a
-            nested list.</p>
-        </div>
-        <div class="grid-gallery-item">
-          <p class="code">
-            if board[w[i][0]]==board[w[i][1]]==board[w[i][2]]!='':
-            if board[w[i][0]]=='X': # Player wins.
-            msg_label.configure(text=win_message)
-          </p>
-          <p>Comparing the values stored in the current copy of the game board to the winning combinations determines
-            whether player X wins the Tic-Tac-Toe Game.</p>
-        </div>
-        <div class="grid-gallery-item">
-          <img src="rock-paper-scissors-in-play-dm.png" alt="Rock-Paper-Scissors Game">
-          <p>Rock-Paper-Scissors Game in play, showing GUI with OS in dark mode.</p>
-        </div>
-        <div class="grid-gallery-item">
-          <img src="rock-paper-scissors-in-play-lm.png" alt="Rock-Paper-Scissors Game">
-          <p>Rock-Paper-Scissors Game in play, showing GUI with OS in light mode.</p>
-        </div>
-      </div>
+      <p class="return-link"><a href="#top">^^ Return to Start</a></p>
     </section>
 
     <hr>
 
-    <section>
-      <h3><a name="skills"></a>Skills</h3>
+    <section id="skills">
+      <h3>Skills</h3>
+      <p>Here's a quick overview of some tools and techniques I've worked with:</p>
       <ul>
-        <li><strong>Programming Languages:</strong> Python</li>
-        <li><strong>Data Analysis:</strong> Pandas, NumPy, Matplotlib, Seaborn</li>
-        <li><strong>Natural Language Processing (NLP):</strong> NLTK, TextBlob</li>
-        <li><strong>GUI Development:</strong> Tkinter</li>
-        <li><strong>Other:</strong> Git, version control, basic web development (HTML, CSS)</li>
-        <li><strong>Soft Skills:</strong> Communication, problem-solving, teamwork, adaptability</li>
+        <li><strong>Programming</strong> || Python</li>
+        <li><strong>Data</strong> || Pandas, Matplotlib, Seaborn</li>
+        <li><strong>NLP</strong> || NLTK // TextBlob</li>
+        <li><strong>GUI Development</strong> || Tkinter</li>
+        <li><strong>Security</strong> || AES-256 // PBKDF2 // secure coding practices</li>
+        <li><strong>Web</strong> || HTML // CSS</li>
+        <li><strong>Tools</strong> || Git (GitHub)</li>
+        <li><strong>QA</strong> || Test case design // defect isolation // data validation // UAT</li>
+        <li><strong>Soft Skills</strong> || Clear documentation // problem-solving // communication</li>
       </ul>
+      <p class="return-link"><a href="#top">^^ Return to Start</a></p>
     </section>
 
     <hr>
 
-    <section>
-      <h3><a name="contact"></a>Contact me</h3>
-      <p>You can message me via Messenger at <a href="https://m.me/caralaucampbell">m.me/caralaucampbell</a>.</p>
-      </div>
+    <section id="contact">
+      <h3>Contact me</h3>
+      <p><strong>Email</strong> || caroline.campbell@bcs.org</p>
+      <p><strong>GitHub</strong> || github.com/tehcara</p>
+      <p><strong>LinkedIn</strong> || TBC</p>
+      <p class="return-link"><a href="#top">^^ Return to Start</a></p>
     </section>
   </main>
 
   <footer>
-    <p>This webpage was coded by Caroline Lau Campbell using HTML and CSS. It was last updated in September 2024.</p>
+    <p>Built with care, curiosity, and all of the black coffee!</p>
+    <p>This webpage was coded by Caroline Lau Campbell LLB PgDip MBCS, using HTML and CSS.</p>
+    <p>It was last updated in May 2026.</p>
   </footer>
 </body>
 
