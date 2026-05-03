@@ -6,17 +6,43 @@
   <link rel="stylesheet" href="portstyles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Caroline's Portfolio // MBCS Python Programmer">
+  <meta name="description"
+    content="Welcome to my portfolio! I'm Caroline, a Python enthusiast exploring opportunities in QA and SecOps. Discover my curated projects that showcase my skills, detective-mindset, and a dash of humour!">
+  <meta name="keywords" content="portfolio, python, programmer, code, QA, SecOps, coursework, projects">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="author" content="Caroline Campbell">
+  <link rel="canonical" href="https://tehcara.github.io/">
+  <!--Change browser tab colour on mobile.-->
+  <meta name="theme-color" content="#646464">
+  <!--Open Graph tags (for link previews).-->
+  <meta property="og:title" content="Caroline's Portfolio // MBCS Python Programmer">
+  <meta property="og:description"
+    content="Python programmer specialising in QA, SecOps, and data analysis. Explore my curated project showcase.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tehcara.github.io/">
+  <meta property="og:image" content="https://tehcara.github.io/preview.png">
+  <!--Twitter Card metadata (for Twitter/X previews).-->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Caroline's Portfolio // MBCS Python Programmer">
+  <meta name="twitter:description" content="Python programmer specialising in QA, SecOps, and data analysis.">
+  <meta name="twitter:image" content="https://tehcara.github.io/preview.png">
 </head>
 
 <body>
+  <a href="#content" class="skip-link">>> skip to main content</a>
   <header id="top">
     <h1><code>Hello World!</code> It's Caroline :&rpar;</h1>
-    <p><strong>Python Programmer // Software QA & SecOps Analyst</strong></p>
+    <h2><strong>Python Programmer // Software QA & SecOps Analyst</strong></h2>
     <p>Investigating code and securing data with a detective-mindset.</p>
   </header>
-  <nav>
+  <nav aria-label="main navigation">
     <ul>
       <li><a href="#about">About Me</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
@@ -26,25 +52,25 @@
   </nav>
 
   <main id="content">
-    <section id="about">
-      <h3>About Me</h3>
+    <section id="about" aria-labelledby="about-heading">
+      <h3 id="about-heading">About Me</h3>
       <p>I'm an MBCS Python programmer with a strong focus on quality assurance, data analysis, and security-minded
         problem-solving. I enjoy finding hidden issues, fine-tuning secure workflows, and bridging communication gaps.
         My background spans cryptography, GUI development, NLP, data visualisation, and hands-on troubleshooting across
         real-world systems, supported by strong administrative and communication skills.</p>
       <p>I love clean code, clear documentation, and that satisfying moment when I solve the problem, no matter what
         time it is. If you'd like to work with me, feel free to get in touch. :&rpar;</p>
-      <p class="return-link"><a href="#top">^^ Return to Start</a></p>
+      <p class="return-link"><a href="#top">^^return to top</a></p>
     </section>
 
     <hr>
 
-    <section id="portfolio">
-      <h3>Project Showcase</h3>
+    <section id="portfolio" aria-labelledby="portfolio-heading">
+      <h3 id="portfolio-heading">Project Showcase</h3>
       <p>Here are some of the projects I've enjoyed building, ranging from technical coursework to personal development.
         Each one reflects my approach to analysis, clarity, structure, and a detective-mindset.</p>
       <ul>
-        <li>
+        <li class="portfolio-entry">
           <h4>AES-256 Cipher Generator</h4>
           <p>Python // Cryptography // PBKDF2 // AES-CBC</p>
           <p>A PEP8-compliant encryption tool developed as my <strong>Open University capstone project</strong>. It uses
@@ -62,16 +88,16 @@
           </ul>
           <figure class="code-figure">
             <figcaption>Defensive Programming &amp; Input Validation</figcaption>
-          <div class="code-box">
-            except WordTooLongError: # catch trolling; words are &lt;45-chars
+            <div class="code-box">
+              except WordTooLongError: # catch trolling; words are &lt;45-chars
               print&lcub;f'The longest English word is '+
-                f'pneumonoultramicroscopicsilicovolcanoconiosis.'&rpar;
-          </div>
+              f'pneumonoultramicroscopicsilicovolcanoconiosis.'&rpar;
+            </div>
           </figure>
           <p><a href="https://github.com/tehcara/aes-cbc-cipher-generator">>> View on GitHub</a></p>
         </li>
 
-        <li>
+        <li class="portfolio-entry">
           <h4>Supermarket Sales Analysis</h4>
           <p>Python // Pandas // Matplotlib // Seaborn // Data Cleaning // Visualisation</p>
           <p>An end-to-end data analysis project developed as my <strong>Edge Hill University capstone project</strong>.
@@ -92,18 +118,18 @@
           <figure class="code-figure">
             <figcaption>Data Cleaning &amp; Feature Engineering</figcaption>
             <div class="code-box">
-            day_list = [] # var to hold days
-            for i in range(df.shape[0]): # iterate over all rows
+              day_list = [] # var to hold days
+              for i in range(df.shape[0]): # iterate over all rows
               # extract day from mm/dd/yyyy
               day = int(str(df['Date'][i]).split('/')[1])
               day_list.append(str(day)) # append to list
-            df['Day'] = day_list # assign new column
-          </div>
+              df['Day'] = day_list # assign new column
+            </div>
           </figure>
           <p><a href="https://github.com/tehcara/supermarket-sales-analysis">>> View on GitHub</a></p>
         </li>
 
-        <li>
+        <li class="portfolio-entry">
           <h4>Sentiment Analysis of Game Reviews</h4>
           <p>Python // NLTK // TextBlob // NER // NLP</p>
           <p>A natural language processing (NLP) project analysing sentiment in video game reviews, with additional
@@ -119,17 +145,17 @@
             <figcaption>Sentiment Classification Logic</figcaption>
             <div class="code-box">
               for sentence in blob.sentences:
-                review_polarity += sentence.sentiment.polarity
+              review_polarity += sentence.sentiment.polarity
               if review_polarity > 0.27: # avg dataset polarity
-                sentiment_label_for_current_review = 1 # positive
+              sentiment_label_for_current_review = 1 # positive
               else:
-                sentiment_label_for_current_review = 0 # negative
+              sentiment_label_for_current_review = 0 # negative
             </div>
           </figure>
           <p><a href="https://github.com/tehcara/nlp-game-reviews-sentiment-analysis">>> View on GitHub</a></p>
         </li>
 
-        <li>
+        <li class="portfolio-entry">
           <h4>GUI Games</h4>
           <p>Python // Tkinter // Event-Driven Programming</p>
           <p>Two small but polished GUI games; Tic-Tac-Toe and Rock-Paper-Scissors. They demonstrate state management,
@@ -159,13 +185,13 @@
           <p><a href="https://github.com/tehcara/rock-paper-scissors-game">>> View Rock-Paper-Scissors on GitHub</a></p>
         </li>
       </ul>
-      <p class="return-link"><a href="#top">^^ Return to Start</a></p>
+      <p class="return-link"><a href="#top">^^return to top</a></p>
     </section>
 
     <hr>
 
-    <section id="skills">
-      <h3>Skills</h3>
+    <section id="skills" aria-labelledby="skills-heading">
+      <h3 id="skills-heading">Skills</h3>
       <p>Here's a quick overview of some tools and techniques I've worked with:</p>
       <ul>
         <li><strong>Programming</strong> || Python</li>
@@ -178,24 +204,25 @@
         <li><strong>QA</strong> || Test case design // defect isolation // data validation // UAT</li>
         <li><strong>Soft Skills</strong> || Clear documentation // problem-solving // communication</li>
       </ul>
-      <p class="return-link"><a href="#top">^^ Return to Start</a></p>
+      <p class="return-link"><a href="#top">^^return to top</a></p>
     </section>
 
     <hr>
 
-    <section id="contact">
-      <h3>Contact me</h3>
+    <section id="contact" aria-labelledby="contact-heading">
+      <h3 id="contact-heading">Contact me</h3>
       <p><strong>Email</strong> || caroline.campbell@bcs.org</p>
       <p><strong>GitHub</strong> || github.com/tehcara</p>
       <p><strong>LinkedIn</strong> || TBC</p>
-      <p class="return-link"><a href="#top">^^ Return to Start</a></p>
+      <p class="return-link"><a href="#top">^^return to top</a></p>
     </section>
   </main>
 
   <footer>
-    <p>Built with care, curiosity, and all of the black coffee!</p>
+    <p>Built with care, curiosity, and gallons of black coffee!</p>
     <p>This webpage was coded by Caroline Lau Campbell LLB PgDip MBCS, using HTML and CSS.</p>
     <p>It was last updated in May 2026.</p>
+    <p>&copy; 2024 to 2026 Caroline L. Campbell. All coffee beans reserved.</p>
   </footer>
 </body>
 

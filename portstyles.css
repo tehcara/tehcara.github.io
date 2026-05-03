@@ -3,19 +3,26 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     max-width: 900px;
     margin: 0 auto;
     padding: 0;
     line-height: 1.6;
-    color: #393939; /* Lacquered Liquorice */
-    background-color: #fcfcfc; /* Very light off-white for contrast */
+    color: #393939;
+    /* Lacquered Liquorice */
+    background-color: #fcfcfc;
+    /* Very light off-white for contrast */
 }
 
 /* ### Header & Nav ### */
 header {
-    background-color: #B9B9B9; /* Greystone */
+    background-color: #B9B9B9;
+    /* Greystone */
     color: #393939;
     padding: 40px 20px;
     text-align: center;
@@ -27,28 +34,73 @@ header h1 {
     color: #393939;
 }
 
+header h2,
 header p {
     font-weight: 500;
-    color: #646464; /* Excalibur */
+    color: #646464;
+    /* Excalibur */
+    font-size: 1em;
 }
 
 header code {
     font-family: 'Inconsolata', monospace;
-    background-color: #393939; /* Lacquered Liquorice */
-    color: #ADFF2F; /* GreenYellow */
+    background-color: #393939;
+    /* Lacquered Liquorice */
+    color: #ADFF2F;
+    /* GreenYellow */
     margin: 5px;
-    padding: 4px 12px; /* Slightly tighter vertical padding for h1 */
-    border-radius: 8px;
+    padding: 4px 12px;
+    /* Slightly tighter vertical padding for h1 */
+    border-radius: 0px 8px 8px 0px;
     display: inline-block;
     vertical-align: middle;
+    border-block: 0.1em dashed #ADFF2F;
+    /* Polygon variables */
+    --bar: 0.25em;   /* depth */
+    --foo: 0.3em;    /* vertical spacing */
+    
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+
+        /* dovetail notch */
+        0 calc(100% - var(--foo)),
+        var(--bar) 50%, 
+        
+        0 var(--foo)
+    );
+    /* Content padding to the left, and to the right */
+    padding-inline: calc(var(--bar) + 0.5em) 0.5em;  
+    line-height: 1.5;
+    width: fit-content;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #d81b60;
+    color: white;
+    padding: 8px 12px;
+    z-index: 10000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 10px;
 }
 
 nav {
-    background-color: #646464; /* Excalibur */
+    background-color: #646464;
+    /* Excalibur */
     padding: 10px 0;
-    position: sticky; /* Keeps nav at top while scrolling */
+    position: sticky;
+    /* Keeps nav at top while scrolling */
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.575);
 }
 
 nav ul {
@@ -64,7 +116,8 @@ nav li a {
     text-decoration: none;
     padding: 8px 16px;
     margin: 5px;
-    color: #E3E3E3; /* Platinum */
+    color: #E3E3E3;
+    /* Platinum */
     font-weight: 600;
     font-size: 0.9em;
     border: 1px solid transparent;
@@ -100,7 +153,8 @@ h4 {
     color: #646464;
 }
 
-p, li {
+p,
+li {
     font-weight: 400;
     color: #393939;
 }
@@ -110,42 +164,65 @@ a {
     font-weight: 600;
 }
 
+a:focus {
+    outline: 2px dashed #d81b60;
+    outline-offset: 4px;
+}
+
+a:hover {
+    color: #d81b60;
+}
+
 hr {
     border: none;
     border-top: 1px dotted #B9B9B9;
     margin: 2em 0;
 }
 
+.portfolio-entry {
+    margin-bottom: 40px;
+}
+
 /* ### Code Snippets ### */
 
 .code-box {
     font-family: 'Inconsolata', monospace;
-    background-color: #393939; /* Lacquered Liquorice */
-    color: #ADFF2F; /* GreenYellow */
+    background-color: #393939;
+    /* Lacquered Liquorice */
+    color: #ADFF2F;
+    /* GreenYellow */
     padding: 15px;
     margin: 15px 0;
-    border-radius: 0 8px 8px 8px; /* Squared off top-left to 'attach' to caption */
+    border-radius: 0 8px 8px 8px;
+    /* Squared off top-left to 'attach' to caption */
     line-height: 1.4;
-    white-space: pre-wrap; /* Honours line breaks but ignores HTML file indentation */
+    white-space: pre-wrap;
+    /* Honours line breaks but ignores HTML file indentation */
     border: 1px solid #646464;
+    overflow-x: auto;
 }
 
 /* Container for the code and caption */
 .code-figure {
     margin: 20px 0;
     padding: 0;
+    max-width: 100%;
 }
 
 /* The Label/Caption */
 figcaption {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Bold to stand out */
+    font-weight: 700;
+    /* Bold to stand out */
     font-size: 0.85em;
-    color: #646464; /* Excalibur */
-    text-transform: uppercase; /* Makes it feel like a professional tag */
+    color: #646464;
+    /* Excalibur */
+    text-transform: uppercase;
+    /* Makes it feel like a professional tag */
     letter-spacing: 1px;
     margin-bottom: 5px;
-    border-left: 3px solid #d81b60; /* Small reddish accent to match your hover links */
+    border-left: 3px solid #d81b60;
+    /* Small reddish accent to match your hover links */
     padding-left: 10px;
 }
 
@@ -158,35 +235,56 @@ figcaption {
 
 .return-link a {
     text-decoration: none;
-    color: #8E8E8E; /* Pedigrey */
+    color: #8E8E8E;
+    /* Pedigrey */
     padding: 2px 5px;
-    border: 1px solid transparent; /* Prevents jumping on hover */
+    border: 1px solid transparent;
+    /* Prevents jumping on hover */
     transition: all 0.3s ease;
 }
 
 .return-link a:hover {
-    color: #d81b60; /* Reddish highlight */
+    color: #d81b60;
+    /* Reddish highlight */
     border: 1px solid #d81b60;
     border-radius: 4px;
 }
 
 /* ### Footer ### */
 footer {
-    background-color: #393939; /* Lacquered Liquorice */
-    color: #E3E3E3; /* Platinum */
+    background-color: #393939;
+    /* Lacquered Liquorice */
+    color: #E3E3E3;
+    /* Platinum */
     padding: 40px 20px;
     text-align: center;
     font-size: 0.8em;
 }
 
 footer p {
-    color: #E3E3E3; /* Ensure the paragraph inherits the pale color */
+    color: #E3E3E3;
+    /* Ensure the paragraph inherits the pale color */
     margin: 0;
 }
 
 /* ### Responsiveness ### */
 @media (max-width: 600px) {
-    header h1 { font-size: 1.8rem; }
-    nav ul { flex-direction: column; }
-    nav li a { display: block; text-align: center; }
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li a {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    #content {
+        padding: 10px;
+    }
 }
