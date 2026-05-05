@@ -290,6 +290,28 @@ footer p {
     }
 }
 
+/* ### Print Settings ### */
+@media print {
+    /* Set background to white and text to black for readability */
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    code, .code-box {
+        color: #000000 !important;
+        border-block-color: #000000 !important;
+    }
+
+    a {
+        text-decoration: underline; /* Helps identify links on paper */
+    }
+
+    nav {
+        display: none !important;
+    }
+}
+
 /* ### Colour Scheme ###
 Available at: https://colorkit.co/palette/393939-646464-8e8e8e-b9b9b9-e3e3e3/ 
 Lacquered Liquorice #393939
